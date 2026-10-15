@@ -212,6 +212,8 @@ struct AskVitta<Content: View>: View {
             )
             .onLongPressGesture(minimumDuration: 0.5) {
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                // Never open the overlay without a real card position.
+                guard frame.width > 1, frame.height > 1 else { return }
                 let press = touch ?? CGPoint(x: frame.midX, y: frame.midY)
                 app.overlay = OverlayInfo(
                     rect: frame,

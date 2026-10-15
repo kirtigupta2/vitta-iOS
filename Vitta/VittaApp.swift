@@ -36,7 +36,7 @@ struct RootView: View {
                         .transition(.opacity)
                         .zIndex(2)
                 }
-                if let info = app.overlay {
+                if let info = app.overlay, info.rect.width > 1, info.rect.height > 1 {
                     VittaOverlayView(info: info)
                         .transition(.opacity)
                         .zIndex(2)

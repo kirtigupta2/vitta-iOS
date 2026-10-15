@@ -32,10 +32,13 @@ struct VittaOverlayView: View {
                 }
 
             // The pressed card, lifted above the scrim.
-            info.card
-                .frame(width: info.rect.width, height: info.rect.height)
-                .position(x: info.rect.midX, y: info.rect.midY)
-                .allowsHitTesting(false)
+            if info.rect.width > 1 && info.rect.height > 1 {
+                info.card
+                    .frame(width: info.rect.width, height: info.rect.height)
+                    .clipped()
+                    .position(x: info.rect.midX, y: info.rect.midY)
+                    .allowsHitTesting(false)
+            }
 
             // Glowing ring under the finger.
             VittaOrb(size: orbSize)
