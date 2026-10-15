@@ -15,13 +15,14 @@ struct AssetImage: View {
 
     var body: some View {
         if UIImage(named: name) != nil {
-            GeometryReader { g in
-                Image(name)
-                    .resizable()
-                    .aspectRatio(contentMode: contentMode)
-                    .frame(width: g.size.width, height: g.size.height, alignment: alignment)
-                    .clipped()
-            }
+            Color.clear
+                .overlay(
+                    Image(name)
+                        .resizable()
+                        .aspectRatio(contentMode: contentMode),
+                    alignment: alignment
+                )
+                .clipped()
         } else {
             ZStack {
                 fallbackColor

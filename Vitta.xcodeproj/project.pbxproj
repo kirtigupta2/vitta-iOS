@@ -17,6 +17,7 @@
 		000000000000000000A10010 /* VittaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A1000F /* VittaApp.swift */; };
 		000000000000000000A10012 /* VittaOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10011 /* VittaOverlayView.swift */; };
 		000000000000000000A10014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10013 /* Assets.xcassets */; };
+		A1FF0002A1FF0002A1FF0002 /* ActivateVittaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF0001A1FF0001A1FF0001 /* ActivateVittaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		000000000000000000A1000F /* VittaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VittaApp.swift; sourceTree = "<group>"; };
 		000000000000000000A10011 /* VittaOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VittaOverlayView.swift; sourceTree = "<group>"; };
 		000000000000000000A10013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1FF0001A1FF0001A1FF0001 /* ActivateVittaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateVittaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				000000000000000000A1000D /* Theme.swift */,
 				000000000000000000A1000F /* VittaApp.swift */,
 				000000000000000000A10011 /* VittaOverlayView.swift */,
+				A1FF0001A1FF0001A1FF0001 /* ActivateVittaView.swift */,
 				000000000000000000A10013 /* Assets.xcassets */,
 			);
 			path = Vitta;
@@ -155,6 +158,7 @@
 				000000000000000000A1000E /* Theme.swift in Sources */,
 				000000000000000000A10010 /* VittaApp.swift in Sources */,
 				000000000000000000A10012 /* VittaOverlayView.swift in Sources */,
+				A1FF0002A1FF0002A1FF0002 /* ActivateVittaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

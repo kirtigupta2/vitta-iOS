@@ -31,6 +31,11 @@ struct RootView: View {
                 if app.screen == .intro {
                     CardIntroView().transition(.opacity)
                 }
+                if app.activateVitta {
+                    ActivateVittaView()
+                        .transition(.opacity)
+                        .zIndex(2)
+                }
                 if let info = app.overlay {
                     VittaOverlayView(info: info)
                         .transition(.opacity)
@@ -48,6 +53,7 @@ struct RootView: View {
                 }
             }
             .animation(.easeInOut(duration: 0.3), value: app.overlay != nil)
+            .animation(.easeInOut(duration: 0.3), value: app.activateVitta)
             .environment(\.insets, insets)
             .environmentObject(app)
             .ignoresSafeArea(.container)

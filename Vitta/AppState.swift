@@ -22,6 +22,7 @@ final class AppState: ObservableObject {
     @Published var screen: Screen = .home
     @Published var mini: MiniStatus? = nil
     @Published var overlay: OverlayInfo? = nil
+    @Published var activateVitta = false   // Vitta tab -> Ask Vitta suggestions
     @Published var toast: String? = nil
 
     private var toastToken = 0
@@ -44,6 +45,7 @@ final class AppState: ObservableObject {
     func minimize(_ status: MiniStatus) {
         mini = status
         overlay = nil
+        activateVitta = false
         withAnimation(.easeInOut(duration: 0.3)) { screen = .home }
     }
 

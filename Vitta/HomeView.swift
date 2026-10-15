@@ -299,7 +299,11 @@ struct HomeView: View {
             .allowsHitTesting(false)
 
             VittaBottomNav(selected: 0) { i in
-                if i != 0 { app.showProto(VittaTab.all[i].label) }
+                if i == 4 {
+                    withAnimation(.easeOut(duration: 0.3)) { app.activateVitta = true }
+                } else if i != 0 {
+                    app.showProto(VittaTab.all[i].label)
+                }
             }
             .padding(.horizontal, 17.5)
             .padding(.bottom, 16 + insets.bottom)
@@ -473,10 +477,11 @@ private struct MiniVitta: View {
                 endPoint: .trailing
             )
 
-            // Whole card opens Vitta
+            // Card body opens Vitta (the header buttons sit on top of this)
             Color.clear
                 .contentShape(Rectangle())
                 .onTapGesture(perform: onOpen)
+                .padding(.top, 40)
 
             HStack(spacing: 0) {
                 VIcon(asset: "vitta", symbol: "sparkles", size: 16, color: VColors.primary)
@@ -488,16 +493,18 @@ private struct MiniVitta: View {
                 Button(action: onOpen) {
                     VIcon(asset: "maximize", symbol: "arrow.up.left.and.arrow.down.right",
                           size: 24, color: VColors.textPrimary)
+                        .frame(width: 28, height: 28)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 Button(action: onDismiss) {
                     Image(systemName: "xmark")
-                        .font(.system(size: 10, weight: .medium))
+                        .font(.system(size: 11, weight: .medium))
                         .foregroundColor(VColors.textPrimary)
-                        .frame(width: 24, height: 24)
+                        .frame(width: 28, height: 28)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .padding(.leading, 4)
             }
             .padding(.horizontal, 12)
             .padding(.top, 12)
