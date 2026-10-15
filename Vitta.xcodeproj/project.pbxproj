@@ -1,0 +1,273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000A10002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10001 /* AppState.swift */; };
+		000000000000000000A10004 /* BuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10003 /* BuildView.swift */; };
+		000000000000000000A10006 /* CardIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10005 /* CardIntroView.swift */; };
+		000000000000000000A10008 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10007 /* Components.swift */; };
+		000000000000000000A1000A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10009 /* HomeView.swift */; };
+		000000000000000000A1000C /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A1000B /* Previews.swift */; };
+		000000000000000000A1000E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A1000D /* Theme.swift */; };
+		000000000000000000A10010 /* VittaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A1000F /* VittaApp.swift */; };
+		000000000000000000A10012 /* VittaOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10011 /* VittaOverlayView.swift */; };
+		000000000000000000A10014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000A10013 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000A10015 /* Vitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000A10001 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		000000000000000000A10003 /* BuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildView.swift; sourceTree = "<group>"; };
+		000000000000000000A10005 /* CardIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIntroView.swift; sourceTree = "<group>"; };
+		000000000000000000A10007 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		000000000000000000A10009 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		000000000000000000A1000B /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
+		000000000000000000A1000D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		000000000000000000A1000F /* VittaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VittaApp.swift; sourceTree = "<group>"; };
+		000000000000000000A10011 /* VittaOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VittaOverlayView.swift; sourceTree = "<group>"; };
+		000000000000000000A10013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000A1001B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000A10016 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000A10017 /* Vitta */,
+				000000000000000000A10018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000A10017 /* Vitta */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000A10001 /* AppState.swift */,
+				000000000000000000A10003 /* BuildView.swift */,
+				000000000000000000A10005 /* CardIntroView.swift */,
+				000000000000000000A10007 /* Components.swift */,
+				000000000000000000A10009 /* HomeView.swift */,
+				000000000000000000A1000B /* Previews.swift */,
+				000000000000000000A1000D /* Theme.swift */,
+				000000000000000000A1000F /* VittaApp.swift */,
+				000000000000000000A10011 /* VittaOverlayView.swift */,
+				000000000000000000A10013 /* Assets.xcassets */,
+			);
+			path = Vitta;
+			sourceTree = "<group>";
+		};
+		000000000000000000A10018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000A10015 /* Vitta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000A10019 /* Vitta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000A1001F /* Build configuration list for PBXNativeTarget "Vitta" */;
+			buildPhases = (
+				000000000000000000A1001A /* Sources */,
+				000000000000000000A1001B /* Frameworks */,
+				000000000000000000A1001C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vitta;
+			productName = Vitta;
+			productReference = 000000000000000000A10015 /* Vitta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000A1001D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					000000000000000000A10019 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000A1001E /* Build configuration list for PBXProject "Vitta" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000A10016;
+			productRefGroup = 000000000000000000A10018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000A10019 /* Vitta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000A1001C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000A10014 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000A1001A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000A10002 /* AppState.swift in Sources */,
+				000000000000000000A10004 /* BuildView.swift in Sources */,
+				000000000000000000A10006 /* CardIntroView.swift in Sources */,
+				000000000000000000A10008 /* Components.swift in Sources */,
+				000000000000000000A1000A /* HomeView.swift in Sources */,
+				000000000000000000A1000C /* Previews.swift in Sources */,
+				000000000000000000A1000E /* Theme.swift in Sources */,
+				000000000000000000A10010 /* VittaApp.swift in Sources */,
+				000000000000000000A10012 /* VittaOverlayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000A10020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000A10021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000A10022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitta.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		000000000000000000A10023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitta.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000A1001E /* Build configuration list for PBXProject "Vitta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000A10020 /* Debug */,
+				000000000000000000A10021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000A1001F /* Build configuration list for PBXNativeTarget "Vitta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000A10022 /* Debug */,
+				000000000000000000A10023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000A1001D /* Project object */;
+}
