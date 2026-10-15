@@ -25,11 +25,15 @@ struct RootView: View {
             ZStack {
                 HomeView()
 
+                // Building -> Card intro swaps instantly. A cross-fade lets the
+                // Home screen show through for a split second.
                 if app.screen == .building {
-                    BuildView().transition(.opacity)
+                    BuildView()
+                        .transition(.asymmetric(insertion: .opacity, removal: .identity))
                 }
                 if app.screen == .intro {
-                    CardIntroView().transition(.opacity)
+                    CardIntroView()
+                        .transition(.asymmetric(insertion: .identity, removal: .opacity))
                 }
                 if app.activateVitta {
                     ActivateVittaView()
