@@ -177,17 +177,32 @@ struct OfferCard: View {
 
 // MARK: - Long press to ask Vitta (A01 -> A02 -> A03)
 
-private struct FramePreferenceKey: PreferenceKey {
-    static var defaultValue: CGRect = .zero
-    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
-        value = nextValue()
+/// Remembers the UIKit view behind a SwiftUI card, so we can ask it for its
+/// exact position on the screen at the moment of the long press.
+final class ViewHolder {
+    weak var view: UIView?
+}
+
+private struct FrameCatcher: UIViewRepresentable {
+    let holder: ViewHolder
+
+    func makeUIView(context: Context) -> UIView {
+        let v = UIView()
+        v.isUserInteractionEnabled = false
+        v.backgroundColor = .clear
+        holder.view = v
+        return v
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        holder.view = uiView
     }
 }
 
 /// Wrap any card with this to get "long press to ask Vitta".
 struct AskVitta<Content: View>: View {
     @EnvironmentObject var app: AppState
-    @State private var frame: CGRect = .zero
+    @State private var holder = ViewHolder()
     @State private var touch: CGPoint? = nil
     private let content: () -> Content
 
@@ -197,23 +212,17 @@ struct AskVitta<Content: View>: View {
 
     var body: some View {
         content()
-            .background(
-                GeometryReader { g in
-                    Color.clear.preference(
-                        key: FramePreferenceKey.self,
-                        value: g.frame(in: .global)
-                    )
-                }
-            )
-            .onPreferenceChange(FramePreferenceKey.self) { frame = $0 }
+            .background(FrameCatcher(holder: holder))
             .simultaneousGesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .global)
                     .onChanged { touch = $0.location }
             )
             .onLongPressGesture(minimumDuration: 0.5) {
-                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                // Never open the overlay without a real card position.
+                // Exact position of this card in screen coordinates.
+                guard let view = holder.view, view.window != nil else { return }
+                let frame = view.convert(view.bounds, to: nil)
                 guard frame.width > 1, frame.height > 1 else { return }
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 let press = touch ?? CGPoint(x: frame.midX, y: frame.midY)
                 app.overlay = OverlayInfo(
                     rect: frame,
