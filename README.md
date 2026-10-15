@@ -16,7 +16,7 @@ inside the `Vitta` folder into the project (tick "Copy items if needed").
 `qa_statement` (Statement icon) was never provided; an SF Symbol is used.
 
 ## Assets
-Everything the app uses is already inside `Vitta/Assets.xcassets` (11 images/icons
-as PNG, 14 SVG icons, app icon, accent color). `Assets-Source/` keeps the original
+Everything the app uses is already inside `Vitta/Assets.xcassets` (8 PNG images,
+14 SVG icons, app icon, accent color). `Assets-Source/` keeps the original
 files too: `images/` (PNG), `icons/` (SVG) and `fonts/` (Roboto TTF, optional –
 the app uses the iPhone system font unless you add Roboto to the project).
